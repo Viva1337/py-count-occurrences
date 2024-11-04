@@ -1,0 +1,18 @@
+def count_occurrences(phrase: str, letter: str) -> int:
+    """
+    Count occurrences of a letter in a phrase (case insensitive).
+
+    :param phrase: The phrase to search within.
+    :param letter: The letter to count occurrences of.
+    :return: The number of occurrences of the letter in the phrase.
+    """
+    # Ensure the input letter is a single character
+    if len(letter) != 1:
+        raise ValueError("The 'letter' parameter should be a single character.")
+    
+    # Convert both the phrase and the letter to lowercase to make the search case-insensitive
+    phrase_lower = phrase.lower()
+    letter_lower = letter.lower()
+    
+    # Count and return the occurrences of the letter in the phrase
+    return phrase_lower.count(letter_lower)
